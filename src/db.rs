@@ -17,6 +17,6 @@ pub fn display_company(db: &HashMap<String, Vec<String>>){
 }
 
 pub fn display_department(department: &str, db: &HashMap<String, Vec<String>>){
-    let department_staff = db.get_key_value(department);
+    let department_staff = db.get_key_value(department).unwrap();
     println!("{department_staff:?}");
 }
